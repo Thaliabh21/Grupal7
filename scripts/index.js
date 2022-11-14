@@ -269,12 +269,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     btnPost.addEventListener('click', ()=>{
         enviarDatosApi();
+        btnPost.disabled = true;
         // document.getElementById('inputPostNombre').value = "";
         // document.getElementById('inputPostApellido').value = "";
     })
 
     btnModificar.addEventListener('click', function(){
         cargarUsuario(document.getElementById("inputPutId").value);
+        btnModificar.disabled = true;
         // modificar(document.getElementById("inputPutId").value);
         // inputPutId.value = "";
     })
@@ -288,6 +290,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     btnBorrar.addEventListener('click', function(){
         borrar(document.getElementById("inputDelete").value);
         inputDelete.value = "";
+        btnBorrar.disabled = true;
     })
 
     btnGuardar.addEventListener('click', function(){
