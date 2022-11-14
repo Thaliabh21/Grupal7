@@ -22,8 +22,7 @@ function mostrarEnLista(input){
     fetch(`https://63642eff8a3337d9a2f312fe.mockapi.io/users/${input}`)
     .then(response => {
         if (response.ok){
-            response.json()
-            
+            response.json()  
         }else{
             throw Error(response.statusText);
         }
@@ -49,9 +48,7 @@ function mostrarEnLista(input){
             document.getElementById('results').innerHTML = 
             `<li>ID: ${datos.id}<br>NAME: ${datos.name}<br>LASTNAME: ${datos.lastname}</li>`;
         }
-
-
-
+        
         document.getElementById('inputGet1Id').value = "";
     
     })
@@ -59,8 +56,7 @@ function mostrarEnLista(input){
         result.status = 'error';
         result.data = error;
         showAlertError();
-        inputGet1Id.value = "";
-        
+        inputGet1Id.value = "";  
     });
 }
 
@@ -79,7 +75,6 @@ function mostrarAgregadosEnLista(registro){
         } 
         document.getElementById('results').innerHTML = datos;
     })
-
 }
 
 
@@ -129,7 +124,7 @@ function revisarUsuarios(){
         if(salida === false){
             showAlertError();
             inputPutId.value = "";
-        }  
+        }
     })
 }
 
